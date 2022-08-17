@@ -1,0 +1,4 @@
+#DS Store Files
+*.DS_Store
+#PyCacheFiles
+__pycache__/

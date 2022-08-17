@@ -282,6 +282,7 @@ def atom_mask_to_graph(label, image, px_angstrom=0.1, cutoff_angstrom=4):
     return g, props
 
 
+
 def bond_vectors(edges):
     """Compute bond displacement vectors from pairwise atom coordinates."""
     u = edges.src["pos"]

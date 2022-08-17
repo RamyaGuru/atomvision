@@ -15,7 +15,7 @@ device = "cpu"
 if torch.cuda.is_available():
     device = torch.device("cuda")
 
-model.load_state_dict(torch.load("checkpoint_rad.pth", map_location=device))
+model.load_state_dict(torch.load("../scripts/models/test/checkpoint_100.pt", map_location=device))
 model.eval()
 model.to(device)
 for bl in model.base_layers:

@@ -723,3 +723,18 @@ Stack trace:
 2022-04-24 09:47:51,043 trainer INFO: Epoch[1] Complete. Time taken: 00:00:17
 2022-04-24 09:47:51,044 trainer INFO: Engine run complete. Time taken: 00:00:17
 2022-04-24 09:47:51,298 trainer INFO: Epoch[99] Complete. Time taken: 00:04:51
+2022-08-12 12:31:56,066 trainer INFO: Engine run starting with max_epochs=100.
+2022-08-12 12:34:27,003 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-12 12:36:24,440 trainer INFO: Epoch[1] Complete. Time taken: 00:01:45
+2022-08-12 12:36:24,442 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-12 12:36:44,455 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-12 12:37:12,879 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-12 12:37:12,880 trainer INFO: Engine run complete. Time taken: 00:00:28
+2022-08-12 12:37:32,889 trainer INFO: Epoch[1] Complete. Time taken: 00:05:24
+2022-08-12 12:40:24,717 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-12 12:42:23,265 trainer INFO: Epoch[1] Complete. Time taken: 00:01:45
+2022-08-12 12:42:23,266 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-12 12:42:43,275 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-12 12:42:57,278 trainer ERROR: Current run is terminating due to exception: DataLoader worker (pid(s) 98455) exited unexpectedly
+2022-08-12 12:42:57,279 trainer ERROR: Engine run is terminating due to exception: DataLoader worker (pid(s) 98455) exited unexpectedly
+2022-08-12 12:43:17,293 trainer ERROR: Engine run is terminating due to exception: DataLoader worker (pid(s) 98455) exited unexpectedly

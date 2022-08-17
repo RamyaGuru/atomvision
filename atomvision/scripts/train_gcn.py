@@ -24,6 +24,7 @@ from atomvision.models.segmentation_utils import (
     to_tensor_resnet18,
     prepare_atom_localization_batch,
 )
+import time
 
 # import warnings
 # warnings.filterwarnings("error")
@@ -40,7 +41,7 @@ unet = smp.Unet(
     in_channels=3,
     classes=1,
 )
-state = torch.load(checkpoint_dir / "checkpoint_5.pt")
+state = torch.load(checkpoint_dir / "checkpoint_100.pt", map_location=torch.device('cpu'))
 unet.load_state_dict(state["model"])
 prepare_graph_batch = build_prepare_graph_batch(
     unet, prepare_atom_localization_batch
@@ -86,7 +87,7 @@ criterion = nn.CrossEntropyLoss()
 
 def acc_transform(output):
     y_pred, y_true = output
-    pred = torch.softmax(y_pred)
+    pred = torch.nn.functional.softmax(y_pred)
     return pred, y_true
 
 
@@ -146,5 +147,7 @@ def log_training_results(trainer):
     )
     print()
 
-
-trainer.run(train_loader, max_epochs=20)
+start = time.time()
+trainer.run(train_loader, max_epochs=3)
+end = time.time()
+print(end-start)
