@@ -738,3 +738,732 @@ Stack trace:
 2022-08-12 12:42:57,278 trainer ERROR: Current run is terminating due to exception: DataLoader worker (pid(s) 98455) exited unexpectedly
 2022-08-12 12:42:57,279 trainer ERROR: Engine run is terminating due to exception: DataLoader worker (pid(s) 98455) exited unexpectedly
 2022-08-12 12:43:17,293 trainer ERROR: Engine run is terminating due to exception: DataLoader worker (pid(s) 98455) exited unexpectedly
+2022-08-26 13:19:47,013 trainer INFO: Engine run starting with max_epochs=100.
+2022-08-26 13:20:09,945 trainer ERROR: Current run is terminating due to exception: [13:20:09] /opt/dgl/src/runtime/c_runtime_api.cc:88: Check failed: allow_missing: Device API gpu is not enabled. Please install the cuda version of dgl.
+Stack trace:
+  [bt] (0) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dmlc::LogMessageFatal::~LogMessageFatal()+0x4f) [0x7f9c31e4129f]
+  [bt] (1) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::runtime::DeviceAPIManager::GetAPI(std::string, bool)+0x37c) [0x7f9c3211372c]
+  [bt] (2) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::runtime::DeviceAPI::Get(DLContext, bool)+0x1f4) [0x7f9c3210db14]
+  [bt] (3) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::runtime::NDArray::Empty(std::vector<long, std::allocator<long> >, DLDataType, DLContext)+0x334) [0x7f9c3212e994]
+  [bt] (4) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::runtime::NDArray::CopyTo(DLContext const&, void* const&) const+0xc7) [0x7f9c3216b1f7]
+  [bt] (5) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::UnitGraph::CopyTo(std::shared_ptr<dgl::BaseHeteroGraph>, DLContext const&, void* const&)+0x317) [0x7f9c3227bfa7]
+  [bt] (6) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::HeteroGraph::CopyTo(std::shared_ptr<dgl::BaseHeteroGraph>, DLContext const&, void* const&)+0x109) [0x7f9c3217d069]
+  [bt] (7) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(+0x4eb739) [0x7f9c3218a739]
+  [bt] (8) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(DGLFuncCall+0x48) [0x7f9c3210d0e8]
+
+
+2022-08-26 13:20:11,189 trainer ERROR: Engine run is terminating due to exception: [13:20:09] /opt/dgl/src/runtime/c_runtime_api.cc:88: Check failed: allow_missing: Device API gpu is not enabled. Please install the cuda version of dgl.
+Stack trace:
+  [bt] (0) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dmlc::LogMessageFatal::~LogMessageFatal()+0x4f) [0x7f9c31e4129f]
+  [bt] (1) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::runtime::DeviceAPIManager::GetAPI(std::string, bool)+0x37c) [0x7f9c3211372c]
+  [bt] (2) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::runtime::DeviceAPI::Get(DLContext, bool)+0x1f4) [0x7f9c3210db14]
+  [bt] (3) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::runtime::NDArray::Empty(std::vector<long, std::allocator<long> >, DLDataType, DLContext)+0x334) [0x7f9c3212e994]
+  [bt] (4) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::runtime::NDArray::CopyTo(DLContext const&, void* const&) const+0xc7) [0x7f9c3216b1f7]
+  [bt] (5) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::UnitGraph::CopyTo(std::shared_ptr<dgl::BaseHeteroGraph>, DLContext const&, void* const&)+0x317) [0x7f9c3227bfa7]
+  [bt] (6) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(dgl::HeteroGraph::CopyTo(std::shared_ptr<dgl::BaseHeteroGraph>, DLContext const&, void* const&)+0x109) [0x7f9c3217d069]
+  [bt] (7) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(+0x4eb739) [0x7f9c3218a739]
+  [bt] (8) /home/rlg3/.conda/envs/atomvision/lib/python3.8/site-packages/dgl-0.9.0-py3.8-linux-x86_64.egg/dgl/libdgl.so(DGLFuncCall+0x48) [0x7f9c3210d0e8]
+
+
+2022-08-26 13:29:00,826 trainer INFO: Engine run starting with max_epochs=100.
+2022-08-26 13:31:00,864 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:32:56,073 trainer INFO: Epoch[1] Complete. Time taken: 00:01:55
+2022-08-26 13:32:56,074 trainer INFO: Engine run complete. Time taken: 00:01:55
+2022-08-26 13:32:56,275 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:33:12,527 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 13:33:12,528 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 13:33:12,663 trainer INFO: Epoch[1] Complete. Time taken: 00:04:11
+2022-08-26 13:35:09,540 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:37:08,123 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 13:37:08,124 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 13:37:08,296 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:37:22,743 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 13:37:22,743 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 13:37:22,917 trainer INFO: Epoch[2] Complete. Time taken: 00:04:10
+2022-08-26 13:39:20,840 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:41:17,982 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 13:41:17,983 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 13:41:18,149 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:41:32,637 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 13:41:32,637 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 13:41:32,834 trainer INFO: Epoch[3] Complete. Time taken: 00:04:10
+2022-08-26 13:43:31,384 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:45:29,377 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 13:45:29,378 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 13:45:29,532 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:45:45,346 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 13:45:45,346 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 13:45:45,494 trainer INFO: Epoch[4] Complete. Time taken: 00:04:13
+2022-08-26 13:47:43,009 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:49:41,627 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 13:49:41,628 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 13:49:41,821 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:49:56,199 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 13:49:56,199 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 13:49:56,386 trainer INFO: Epoch[5] Complete. Time taken: 00:04:11
+2022-08-26 13:51:55,020 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:53:50,179 trainer INFO: Epoch[1] Complete. Time taken: 00:01:55
+2022-08-26 13:53:50,180 trainer INFO: Engine run complete. Time taken: 00:01:55
+2022-08-26 13:53:50,335 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:54:04,860 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 13:54:04,860 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 13:54:05,025 trainer INFO: Epoch[6] Complete. Time taken: 00:04:09
+2022-08-26 13:56:04,332 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:58:01,621 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 13:58:01,622 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 13:58:01,803 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 13:58:17,159 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 13:58:17,159 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 13:58:17,343 trainer INFO: Epoch[7] Complete. Time taken: 00:04:12
+2022-08-26 14:00:14,714 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:02:13,334 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 14:02:13,336 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 14:02:13,484 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:02:28,138 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 14:02:28,138 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 14:02:28,294 trainer INFO: Epoch[8] Complete. Time taken: 00:04:11
+2022-08-26 14:04:27,991 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:06:24,853 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 14:06:24,854 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 14:06:25,009 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:06:39,880 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 14:06:39,880 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 14:06:40,016 trainer INFO: Epoch[9] Complete. Time taken: 00:04:12
+2022-08-26 14:08:39,458 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:10:38,071 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 14:10:38,071 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 14:10:38,223 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:10:53,412 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 14:10:53,412 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 14:10:53,577 trainer INFO: Epoch[10] Complete. Time taken: 00:04:14
+2022-08-26 14:12:49,279 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:14:46,432 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 14:14:46,433 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 14:14:46,596 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:15:01,102 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 14:15:01,102 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 14:15:01,271 trainer INFO: Epoch[11] Complete. Time taken: 00:04:08
+2022-08-26 14:17:00,221 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:18:56,851 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 14:18:56,851 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 14:18:57,012 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:19:11,438 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 14:19:11,438 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 14:19:11,571 trainer INFO: Epoch[12] Complete. Time taken: 00:04:10
+2022-08-26 14:21:10,236 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:23:07,120 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 14:23:07,121 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 14:23:07,277 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:23:22,685 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 14:23:22,685 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 14:23:22,828 trainer INFO: Epoch[13] Complete. Time taken: 00:04:11
+2022-08-26 14:25:19,052 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:27:16,445 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 14:27:16,446 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 14:27:16,602 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:27:31,210 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 14:27:31,211 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 14:27:31,359 trainer INFO: Epoch[14] Complete. Time taken: 00:04:09
+2022-08-26 14:29:30,914 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:31:27,983 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 14:31:27,984 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 14:31:28,177 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:31:43,049 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 14:31:43,049 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 14:31:43,201 trainer INFO: Epoch[15] Complete. Time taken: 00:04:12
+2022-08-26 14:33:42,666 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:35:40,203 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 14:35:40,204 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 14:35:40,422 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:35:55,756 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 14:35:55,756 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 14:35:55,908 trainer INFO: Epoch[16] Complete. Time taken: 00:04:13
+2022-08-26 14:37:53,432 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:39:51,848 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 14:39:51,849 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 14:39:52,038 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:40:06,892 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 14:40:06,893 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 14:40:07,026 trainer INFO: Epoch[17] Complete. Time taken: 00:04:11
+2022-08-26 14:42:06,287 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:44:02,931 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 14:44:02,932 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 14:44:03,085 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:44:17,455 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 14:44:17,456 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 14:44:17,600 trainer INFO: Epoch[18] Complete. Time taken: 00:04:11
+2022-08-26 14:46:16,167 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:48:14,719 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 14:48:14,720 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 14:48:14,909 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:48:30,497 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 14:48:30,497 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 14:48:30,657 trainer INFO: Epoch[19] Complete. Time taken: 00:04:13
+2022-08-26 14:50:27,977 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:52:26,120 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 14:52:26,121 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 14:52:26,297 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:52:40,558 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 14:52:40,558 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 14:52:40,701 trainer INFO: Epoch[20] Complete. Time taken: 00:04:10
+2022-08-26 14:54:40,893 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:56:37,245 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 14:56:37,246 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 14:56:37,422 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 14:56:51,575 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 14:56:51,575 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 14:56:51,727 trainer INFO: Epoch[21] Complete. Time taken: 00:04:11
+2022-08-26 14:58:51,045 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:00:49,811 trainer INFO: Epoch[1] Complete. Time taken: 00:01:59
+2022-08-26 15:00:49,812 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 15:00:49,977 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:01:04,629 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 15:01:04,630 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 15:01:04,806 trainer INFO: Epoch[22] Complete. Time taken: 00:04:13
+2022-08-26 15:03:01,213 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:04:58,402 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 15:04:58,403 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 15:04:58,549 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:05:12,839 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 15:05:12,839 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 15:05:13,008 trainer INFO: Epoch[23] Complete. Time taken: 00:04:08
+2022-08-26 15:07:12,556 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:09:09,002 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 15:09:09,003 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 15:09:09,191 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:09:24,089 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 15:09:24,089 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 15:09:24,293 trainer INFO: Epoch[24] Complete. Time taken: 00:04:11
+2022-08-26 15:11:24,289 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:13:22,929 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 15:13:22,930 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 15:13:23,089 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:13:37,493 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 15:13:37,493 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 15:13:37,659 trainer INFO: Epoch[25] Complete. Time taken: 00:04:13
+2022-08-26 15:15:33,905 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:17:31,517 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 15:17:31,518 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 15:17:31,662 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:17:46,446 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 15:17:46,446 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 15:17:46,629 trainer INFO: Epoch[26] Complete. Time taken: 00:04:09
+2022-08-26 15:19:45,774 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:21:41,684 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 15:21:41,685 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 15:21:41,820 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:21:57,384 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 15:21:57,384 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 15:21:57,591 trainer INFO: Epoch[27] Complete. Time taken: 00:04:11
+2022-08-26 15:23:54,767 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:25:52,817 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 15:25:52,818 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 15:25:52,973 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:26:07,290 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 15:26:07,291 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 15:26:07,458 trainer INFO: Epoch[28] Complete. Time taken: 00:04:10
+2022-08-26 15:28:05,513 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:30:04,089 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 15:30:04,090 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 15:30:04,264 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:30:18,826 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 15:30:18,827 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 15:30:19,001 trainer INFO: Epoch[29] Complete. Time taken: 00:04:12
+2022-08-26 15:32:18,766 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:34:14,954 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 15:34:14,955 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 15:34:15,092 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:34:31,768 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 15:34:31,768 trainer INFO: Engine run complete. Time taken: 00:00:17
+2022-08-26 15:34:31,944 trainer INFO: Epoch[30] Complete. Time taken: 00:04:13
+2022-08-26 15:36:29,524 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:38:27,448 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 15:38:27,449 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 15:38:27,627 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:38:42,397 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 15:38:42,397 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 15:38:42,524 trainer INFO: Epoch[31] Complete. Time taken: 00:04:11
+2022-08-26 15:40:41,349 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:42:39,175 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 15:42:39,176 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 15:42:39,364 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:42:53,931 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 15:42:53,931 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 15:42:54,122 trainer INFO: Epoch[32] Complete. Time taken: 00:04:12
+2022-08-26 15:44:53,487 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:46:50,169 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 15:46:50,170 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 15:46:50,358 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:47:06,163 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 15:47:06,163 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 15:47:06,330 trainer INFO: Epoch[33] Complete. Time taken: 00:04:12
+2022-08-26 15:49:02,787 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:51:00,850 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 15:51:00,851 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 15:51:00,985 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:51:15,325 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 15:51:15,325 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 15:51:15,517 trainer INFO: Epoch[34] Complete. Time taken: 00:04:09
+2022-08-26 15:53:14,102 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:55:10,946 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 15:55:10,947 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 15:55:11,128 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:55:25,705 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 15:55:25,706 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 15:55:25,883 trainer INFO: Epoch[35] Complete. Time taken: 00:04:10
+2022-08-26 15:57:25,867 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:59:23,515 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 15:59:23,516 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 15:59:23,736 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 15:59:39,231 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 15:59:39,232 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 15:59:39,378 trainer INFO: Epoch[36] Complete. Time taken: 00:04:13
+2022-08-26 16:01:36,718 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:03:34,790 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 16:03:34,791 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 16:03:34,986 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:03:49,394 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 16:03:49,394 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 16:03:49,584 trainer INFO: Epoch[37] Complete. Time taken: 00:04:10
+2022-08-26 16:05:48,243 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:07:44,731 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 16:07:44,732 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 16:07:44,925 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:07:59,402 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 16:07:59,402 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 16:07:59,569 trainer INFO: Epoch[38] Complete. Time taken: 00:04:10
+2022-08-26 16:09:59,219 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:11:57,453 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 16:11:57,453 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 16:11:57,631 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:12:12,671 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 16:12:12,671 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 16:12:12,834 trainer INFO: Epoch[39] Complete. Time taken: 00:04:13
+2022-08-26 16:14:09,962 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:16:09,057 trainer INFO: Epoch[1] Complete. Time taken: 00:01:59
+2022-08-26 16:16:09,059 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 16:16:09,227 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:16:23,754 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 16:16:23,754 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 16:16:23,908 trainer INFO: Epoch[40] Complete. Time taken: 00:04:11
+2022-08-26 16:18:23,976 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:20:20,374 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 16:20:20,375 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 16:20:20,541 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:20:35,632 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 16:20:35,632 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 16:20:35,833 trainer INFO: Epoch[41] Complete. Time taken: 00:04:12
+2022-08-26 16:22:35,159 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:24:34,766 trainer INFO: Epoch[1] Complete. Time taken: 00:01:59
+2022-08-26 16:24:34,767 trainer INFO: Engine run complete. Time taken: 00:01:60
+2022-08-26 16:24:34,907 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:24:49,288 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 16:24:49,288 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 16:24:49,474 trainer INFO: Epoch[42] Complete. Time taken: 00:04:14
+2022-08-26 16:26:47,792 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:28:44,547 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 16:28:44,548 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 16:28:44,735 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:28:59,166 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 16:28:59,166 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 16:28:59,344 trainer INFO: Epoch[43] Complete. Time taken: 00:04:10
+2022-08-26 16:30:57,793 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:32:53,445 trainer INFO: Epoch[1] Complete. Time taken: 00:01:55
+2022-08-26 16:32:53,445 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 16:32:53,619 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:33:09,204 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 16:33:09,204 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 16:33:09,391 trainer INFO: Epoch[44] Complete. Time taken: 00:04:10
+2022-08-26 16:35:08,600 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:37:06,830 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 16:37:06,832 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 16:37:06,988 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:37:21,318 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 16:37:21,318 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 16:37:21,476 trainer INFO: Epoch[45] Complete. Time taken: 00:04:12
+2022-08-26 16:39:17,435 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:41:15,135 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 16:41:15,136 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 16:41:15,296 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:41:29,750 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 16:41:29,750 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 16:41:29,915 trainer INFO: Epoch[46] Complete. Time taken: 00:04:08
+2022-08-26 16:43:28,212 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:45:24,335 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 16:45:24,336 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 16:45:24,508 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:45:40,591 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 16:45:40,591 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 16:45:40,745 trainer INFO: Epoch[47] Complete. Time taken: 00:04:11
+2022-08-26 16:47:39,811 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:49:38,050 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 16:49:38,052 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 16:49:38,229 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:49:52,641 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 16:49:52,641 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 16:49:52,814 trainer INFO: Epoch[48] Complete. Time taken: 00:04:12
+2022-08-26 16:51:49,177 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:53:46,588 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 16:53:46,589 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 16:53:46,737 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:54:01,229 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 16:54:01,229 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 16:54:01,379 trainer INFO: Epoch[49] Complete. Time taken: 00:04:09
+2022-08-26 16:56:00,737 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:57:57,591 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 16:57:57,592 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 16:57:57,760 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 16:58:13,634 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 16:58:13,634 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 16:58:13,850 trainer INFO: Epoch[50] Complete. Time taken: 00:04:12
+2022-08-26 17:00:11,430 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:02:09,726 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 17:02:09,727 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 17:02:09,904 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:02:24,543 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 17:02:24,544 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 17:02:24,709 trainer INFO: Epoch[51] Complete. Time taken: 00:04:11
+2022-08-26 17:04:22,349 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:06:20,660 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 17:06:20,661 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 17:06:20,824 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:06:35,218 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 17:06:35,218 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 17:06:35,382 trainer INFO: Epoch[52] Complete. Time taken: 00:04:11
+2022-08-26 17:08:34,742 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:10:31,685 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 17:10:31,686 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 17:10:31,870 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:10:48,168 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 17:10:48,169 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 17:10:48,379 trainer INFO: Epoch[53] Complete. Time taken: 00:04:13
+2022-08-26 17:12:46,384 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:14:44,751 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 17:14:44,752 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 17:14:44,926 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:14:59,556 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 17:14:59,557 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 17:14:59,744 trainer INFO: Epoch[54] Complete. Time taken: 00:04:11
+2022-08-26 17:16:57,971 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:18:56,507 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 17:18:56,509 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 17:18:56,710 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:19:11,861 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 17:19:11,861 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 17:19:12,027 trainer INFO: Epoch[55] Complete. Time taken: 00:04:12
+2022-08-26 17:21:11,348 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:23:08,234 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 17:23:08,235 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 17:23:08,410 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:23:25,168 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 17:23:25,168 trainer INFO: Engine run complete. Time taken: 00:00:17
+2022-08-26 17:23:25,311 trainer INFO: Epoch[56] Complete. Time taken: 00:04:13
+2022-08-26 17:25:21,627 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:27:18,797 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 17:27:18,798 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 17:27:18,930 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:27:33,336 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 17:27:33,336 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 17:27:33,495 trainer INFO: Epoch[57] Complete. Time taken: 00:04:08
+2022-08-26 17:29:32,040 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:31:29,801 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 17:31:29,802 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 17:31:29,979 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:31:44,344 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 17:31:44,344 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 17:31:44,526 trainer INFO: Epoch[58] Complete. Time taken: 00:04:11
+2022-08-26 17:33:44,174 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:35:39,652 trainer INFO: Epoch[1] Complete. Time taken: 00:01:55
+2022-08-26 17:35:39,653 trainer INFO: Engine run complete. Time taken: 00:01:55
+2022-08-26 17:35:39,839 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:35:56,729 trainer INFO: Epoch[1] Complete. Time taken: 00:00:17
+2022-08-26 17:35:56,729 trainer INFO: Engine run complete. Time taken: 00:00:17
+2022-08-26 17:35:56,892 trainer INFO: Epoch[59] Complete. Time taken: 00:04:12
+2022-08-26 17:37:53,242 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:39:51,749 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 17:39:51,750 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 17:39:51,892 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:40:06,272 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 17:40:06,273 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 17:40:06,440 trainer INFO: Epoch[60] Complete. Time taken: 00:04:10
+2022-08-26 17:42:03,246 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:44:01,151 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 17:44:01,152 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 17:44:01,344 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:44:15,625 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 17:44:15,626 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 17:44:15,807 trainer INFO: Epoch[61] Complete. Time taken: 00:04:09
+2022-08-26 17:46:14,547 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:48:11,416 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 17:48:11,417 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 17:48:11,600 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:48:27,927 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 17:48:27,927 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 17:48:28,132 trainer INFO: Epoch[62] Complete. Time taken: 00:04:12
+2022-08-26 17:50:25,387 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:52:23,748 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 17:52:23,749 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 17:52:23,895 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:52:38,386 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 17:52:38,387 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 17:52:38,529 trainer INFO: Epoch[63] Complete. Time taken: 00:04:10
+2022-08-26 17:54:36,745 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:56:34,373 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 17:56:34,374 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 17:56:34,532 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 17:56:49,241 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 17:56:49,241 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 17:56:49,408 trainer INFO: Epoch[64] Complete. Time taken: 00:04:11
+2022-08-26 17:58:48,773 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:00:39,383 trainer INFO: Epoch[1] Complete. Time taken: 00:01:50
+2022-08-26 18:00:39,384 trainer INFO: Engine run complete. Time taken: 00:01:51
+2022-08-26 18:00:39,513 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:00:53,889 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 18:00:53,889 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 18:00:54,053 trainer INFO: Epoch[65] Complete. Time taken: 00:04:05
+2022-08-26 18:02:43,154 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:04:30,052 trainer INFO: Epoch[1] Complete. Time taken: 00:01:47
+2022-08-26 18:04:30,053 trainer INFO: Engine run complete. Time taken: 00:01:47
+2022-08-26 18:04:30,185 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:04:45,882 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 18:04:45,883 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 18:04:46,049 trainer INFO: Epoch[66] Complete. Time taken: 00:03:52
+2022-08-26 18:06:33,400 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:08:19,539 trainer INFO: Epoch[1] Complete. Time taken: 00:01:46
+2022-08-26 18:08:19,540 trainer INFO: Engine run complete. Time taken: 00:01:46
+2022-08-26 18:08:19,703 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:08:34,692 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 18:08:34,693 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 18:08:34,825 trainer INFO: Epoch[67] Complete. Time taken: 00:03:49
+2022-08-26 18:10:22,777 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:12:09,146 trainer INFO: Epoch[1] Complete. Time taken: 00:01:46
+2022-08-26 18:12:09,147 trainer INFO: Engine run complete. Time taken: 00:01:46
+2022-08-26 18:12:09,316 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:12:23,386 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 18:12:23,386 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 18:12:23,518 trainer INFO: Epoch[68] Complete. Time taken: 00:03:49
+2022-08-26 18:14:18,724 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:16:16,970 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 18:16:16,971 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 18:16:17,139 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:16:31,714 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 18:16:31,714 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 18:16:31,858 trainer INFO: Epoch[69] Complete. Time taken: 00:04:08
+2022-08-26 18:18:30,054 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:20:26,957 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 18:20:26,958 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 18:20:27,123 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:20:41,837 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 18:20:41,837 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 18:20:41,989 trainer INFO: Epoch[70] Complete. Time taken: 00:04:10
+2022-08-26 18:22:41,893 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:24:40,389 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 18:24:40,390 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 18:24:40,569 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:24:55,109 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 18:24:55,109 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 18:24:55,285 trainer INFO: Epoch[71] Complete. Time taken: 00:04:13
+2022-08-26 18:26:52,313 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:28:51,062 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 18:28:51,063 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 18:28:51,231 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:29:05,794 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 18:29:05,794 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 18:29:05,958 trainer INFO: Epoch[72] Complete. Time taken: 00:04:11
+2022-08-26 18:31:05,069 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:33:01,460 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 18:33:01,461 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 18:33:01,641 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:33:17,144 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 18:33:17,144 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 18:33:17,333 trainer INFO: Epoch[73] Complete. Time taken: 00:04:11
+2022-08-26 18:35:15,480 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:37:13,760 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 18:37:13,760 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 18:37:13,895 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:37:28,425 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 18:37:28,425 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 18:37:28,598 trainer INFO: Epoch[74] Complete. Time taken: 00:04:11
+2022-08-26 18:39:25,913 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:41:24,598 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 18:41:24,599 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 18:41:24,775 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:41:39,136 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 18:41:39,136 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 18:41:39,272 trainer INFO: Epoch[75] Complete. Time taken: 00:04:11
+2022-08-26 18:43:38,973 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:45:35,349 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 18:45:35,350 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 18:45:35,516 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:45:51,546 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 18:45:51,546 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 18:45:51,709 trainer INFO: Epoch[76] Complete. Time taken: 00:04:12
+2022-08-26 18:47:48,861 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:49:47,579 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 18:49:47,580 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 18:49:47,717 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:50:02,424 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 18:50:02,424 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 18:50:02,601 trainer INFO: Epoch[77] Complete. Time taken: 00:04:11
+2022-08-26 18:52:00,376 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:53:57,402 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 18:53:57,403 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 18:53:57,538 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:54:12,197 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 18:54:12,197 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 18:54:12,361 trainer INFO: Epoch[78] Complete. Time taken: 00:04:10
+2022-08-26 18:56:11,885 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:58:08,540 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 18:58:08,541 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 18:58:08,725 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 18:58:25,260 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 18:58:25,260 trainer INFO: Engine run complete. Time taken: 00:00:17
+2022-08-26 18:58:25,455 trainer INFO: Epoch[79] Complete. Time taken: 00:04:13
+2022-08-26 19:00:24,038 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:02:22,258 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 19:02:22,259 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 19:02:22,421 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:02:36,842 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 19:02:36,842 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 19:02:37,003 trainer INFO: Epoch[80] Complete. Time taken: 00:04:12
+2022-08-26 19:04:34,979 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:06:32,271 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 19:06:32,272 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 19:06:32,455 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:06:46,910 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 19:06:46,910 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 19:06:47,050 trainer INFO: Epoch[81] Complete. Time taken: 00:04:10
+2022-08-26 19:08:46,294 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:10:42,485 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 19:10:42,485 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 19:10:42,635 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:10:59,190 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 19:10:59,190 trainer INFO: Engine run complete. Time taken: 00:00:17
+2022-08-26 19:10:59,342 trainer INFO: Epoch[82] Complete. Time taken: 00:04:12
+2022-08-26 19:12:57,662 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:14:57,605 trainer INFO: Epoch[1] Complete. Time taken: 00:01:60
+2022-08-26 19:14:57,606 trainer INFO: Engine run complete. Time taken: 00:01:60
+2022-08-26 19:14:57,783 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:15:12,203 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 19:15:12,204 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 19:15:12,354 trainer INFO: Epoch[83] Complete. Time taken: 00:04:13
+2022-08-26 19:17:12,351 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:19:07,972 trainer INFO: Epoch[1] Complete. Time taken: 00:01:55
+2022-08-26 19:19:07,973 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 19:19:08,111 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:19:22,738 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 19:19:22,738 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 19:19:22,874 trainer INFO: Epoch[84] Complete. Time taken: 00:04:11
+2022-08-26 19:21:21,965 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:23:18,631 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 19:23:18,632 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 19:23:18,829 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:23:34,705 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 19:23:34,705 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 19:23:34,847 trainer INFO: Epoch[85] Complete. Time taken: 00:04:12
+2022-08-26 19:25:31,996 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:27:29,086 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 19:27:29,087 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 19:27:29,263 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:27:43,672 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 19:27:43,672 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 19:27:43,827 trainer INFO: Epoch[86] Complete. Time taken: 00:04:09
+2022-08-26 19:29:43,218 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:31:39,680 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 19:31:39,681 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 19:31:39,879 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:31:54,220 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 19:31:54,220 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 19:31:54,405 trainer INFO: Epoch[87] Complete. Time taken: 00:04:11
+2022-08-26 19:33:53,279 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:35:49,838 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 19:35:49,839 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 19:35:50,055 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:36:06,135 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 19:36:06,135 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 19:36:06,280 trainer INFO: Epoch[88] Complete. Time taken: 00:04:12
+2022-08-26 19:38:02,241 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:40:00,635 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 19:40:00,637 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 19:40:00,825 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:40:15,226 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 19:40:15,226 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 19:40:15,387 trainer INFO: Epoch[89] Complete. Time taken: 00:04:09
+2022-08-26 19:42:13,682 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:44:09,605 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 19:44:09,606 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 19:44:09,800 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:44:24,175 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 19:44:24,175 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 19:44:24,345 trainer INFO: Epoch[90] Complete. Time taken: 00:04:09
+2022-08-26 19:46:23,330 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:48:19,548 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 19:48:19,549 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 19:48:19,742 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:48:36,188 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 19:48:36,188 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 19:48:36,317 trainer INFO: Epoch[91] Complete. Time taken: 00:04:12
+2022-08-26 19:50:34,090 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:52:32,106 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 19:52:32,107 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 19:52:32,249 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:52:46,680 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 19:52:46,681 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 19:52:46,828 trainer INFO: Epoch[92] Complete. Time taken: 00:04:11
+2022-08-26 19:54:45,868 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:56:42,222 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 19:56:42,223 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 19:56:42,374 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 19:56:56,983 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 19:56:56,983 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 19:56:57,166 trainer INFO: Epoch[93] Complete. Time taken: 00:04:10
+2022-08-26 19:58:56,574 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:00:52,425 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 20:00:52,426 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 20:00:52,582 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:01:09,165 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 20:01:09,165 trainer INFO: Engine run complete. Time taken: 00:00:17
+2022-08-26 20:01:09,322 trainer INFO: Epoch[94] Complete. Time taken: 00:04:12
+2022-08-26 20:03:06,544 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:05:04,775 trainer INFO: Epoch[1] Complete. Time taken: 00:01:58
+2022-08-26 20:05:04,776 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 20:05:04,960 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:05:19,545 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 20:05:19,545 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 20:05:19,691 trainer INFO: Epoch[95] Complete. Time taken: 00:04:10
+2022-08-26 20:07:19,159 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:09:15,865 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 20:09:15,866 trainer INFO: Engine run complete. Time taken: 00:01:57
+2022-08-26 20:09:16,040 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:09:30,404 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 20:09:30,404 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 20:09:30,561 trainer INFO: Epoch[96] Complete. Time taken: 00:04:11
+2022-08-26 20:11:29,443 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:13:25,542 trainer INFO: Epoch[1] Complete. Time taken: 00:01:56
+2022-08-26 20:13:25,542 trainer INFO: Engine run complete. Time taken: 00:01:56
+2022-08-26 20:13:25,721 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:13:41,815 trainer INFO: Epoch[1] Complete. Time taken: 00:00:16
+2022-08-26 20:13:41,816 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 20:13:42,000 trainer INFO: Epoch[97] Complete. Time taken: 00:04:11
+2022-08-26 20:15:38,847 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:17:37,674 trainer INFO: Epoch[1] Complete. Time taken: 00:01:59
+2022-08-26 20:17:37,675 trainer INFO: Engine run complete. Time taken: 00:01:59
+2022-08-26 20:17:37,848 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:17:52,379 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 20:17:52,379 trainer INFO: Engine run complete. Time taken: 00:00:15
+2022-08-26 20:17:52,542 trainer INFO: Epoch[98] Complete. Time taken: 00:04:11
+2022-08-26 20:19:52,279 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:21:47,686 trainer INFO: Epoch[1] Complete. Time taken: 00:01:55
+2022-08-26 20:21:47,687 trainer INFO: Engine run complete. Time taken: 00:01:55
+2022-08-26 20:21:47,881 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:22:02,081 trainer INFO: Epoch[1] Complete. Time taken: 00:00:14
+2022-08-26 20:22:02,081 trainer INFO: Engine run complete. Time taken: 00:00:14
+2022-08-26 20:22:02,263 trainer INFO: Epoch[99] Complete. Time taken: 00:04:10
+2022-08-26 20:24:00,987 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:25:58,632 trainer INFO: Epoch[1] Complete. Time taken: 00:01:57
+2022-08-26 20:25:58,632 trainer INFO: Engine run complete. Time taken: 00:01:58
+2022-08-26 20:25:58,825 trainer INFO: Engine run starting with max_epochs=1.
+2022-08-26 20:26:14,333 trainer INFO: Epoch[1] Complete. Time taken: 00:00:15
+2022-08-26 20:26:14,333 trainer INFO: Engine run complete. Time taken: 00:00:16
+2022-08-26 20:26:14,516 trainer INFO: Epoch[100] Complete. Time taken: 00:04:12
+2022-08-26 20:26:14,516 trainer INFO: Engine run complete. Time taken: 06:57:14

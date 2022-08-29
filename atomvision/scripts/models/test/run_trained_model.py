@@ -33,7 +33,7 @@ device = torch.device("cpu")
 batch_size = 1
 
 # Get the (distorted) 2D STEM Dataset used for testing
-my_data = data("dft_2d")[0:6]
+my_data = data("dft_2d")
 j2d = Jarvis2dSTEMDataset(  
     image_data =  my_data, 
 	label_mode="radius"
@@ -59,7 +59,7 @@ unet.load_state_dict(state["model"])
 # Generate Plots of the Graph Representations
 
 graphs = []
-for indx in range(len(j2d)):
+for indx in range(8):
     #image = np.reshape(j2d[indx]["image"], (256,256,3))
     print(np.shape(j2d[indx]["label"]))
     print(np.shape(j2d[indx]["image"]))
@@ -75,11 +75,11 @@ for indx in range(len(j2d)):
 cfg = ALIGNNConfig(
     name="alignn",
     alignn_layers=0,
-    #atom_input_features=2,
+    atom_input_features=2,
     output_features=j2d.n_classes,
 )
 gcn_model = ALIGNN(cfg)
-state = torch.load(checkpoint_dir / "gcn_checkpoint_99.pt", map_location=torch.device('cpu'))
+state = torch.load(checkpoint_dir / "gcn_checkpoint_100.pt", map_location=torch.device('cpu'))
 gcn_model.load_state_dict(state["model"])
 gcn_model.to(device)
 gcn_model.eval()
